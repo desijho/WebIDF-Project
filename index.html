@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="acantril">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>WebIDF Gallery</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- AWS SDK and Google Sign-In API -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.19.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <h1>Photo Gallery Project</h1>
+
+    <!-- Google Sign-In button -->
+    <div id="g_id_onload"
+         data-client_id="959223767479-nkih3ci7f9om6kchoqn2bmhakihi8l2s.apps.googleusercontent.com"
+         data-context="signin"
+         data-ux_mode="popup"
+         data-callback="onSignIn"
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+
+    <!-- Viewer and Output areas -->
+    <div id="viewer">
+      <p>Files will be shown here after authentication</p>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

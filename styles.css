@@ -1,0 +1,147 @@
+/* Basic styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #6a82fb, #fc5c7d);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite; /* Smooth background gradient shift */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Fade-in effect on page load */
+}
+
+/* Fade-in effect for the page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Gradient animation for background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Title styling */
+h1 {
+  font-size: 32px;
+  color: #007bff; /* Bright blue title */
+  margin-bottom: 20px;
+  text-align: center;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+h1:hover {
+  text-shadow: 0 0 10px rgba(0, 123, 255, 1), 0 0 20px rgba(0, 123, 255, 1); /* Glowing effect */
+}
+
+/* Styling for the Google Sign-In button */
+.g_id_signin {
+  margin: 20px;
+}
+
+/* Viewer and output sections */
+#viewer, #output {
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a hover effect for viewer and output sections */
+#viewer:hover, #output:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Section header (for viewer and output) */
+#viewer h2, #output h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Styling for the images inside the viewer */
+#viewer img {
+  width: 224px;
+  height: 224px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image hover effects (zoom, shadow, and lifting) */
+#viewer a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+#viewer a:hover img {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  transition: all 0.3s ease-in-out;
+}
+
+#viewer a:hover {
+  transform: translateY(-5px); /* Lift the image card */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling for links to images */
+#viewer a {
+  text-decoration: none;
+}
+
+/* Output error message style */
+#output {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+/* Button and input hover effect */
+button:hover, input:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Footer and additional text styling */
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
